@@ -1,0 +1,760 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono&display=swap');
+:root 
+{
+    --primary-color: rgba(13, 110, 139, 0.75);
+    --overlay-color: rgba(24, 39, 51 , 0.85);
+    --menu-speed: 0.75s;
+}
+html
+{
+    height: 100%;
+    width: 100%;
+}
+body
+{
+    overflow: hidden;
+    position: absolute;
+    font-family: 'Space Mono', monospace;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('images/backgrounds/background.jpg');
+    background-position-x: 50%;
+    color: white;
+}
+/* INDEX PAGE */
+#main_index
+{
+    width: 40%;
+    height: 90%;
+    position: fixed;
+    top: 10%;
+    left: 30%;
+    padding: 1%;
+    background-color: rgba(51,51,51, 0.8);
+    overflow: auto;
+}
+::-webkit-scrollbar
+{
+    width: 2%;
+}
+::-webkit-scrollbar-track
+{
+    background-color: #333;
+}
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background-color: rgb(70, 70, 70);
+}
+::-webkit-scrollbar-thumb:hover
+{
+    background-color: rgb(85, 85, 85);
+}
+#main_index .post
+{
+    height: 28%;
+    width: 96%;
+    border-radius: 10px;
+    border: 2px solid #FFCA4B;
+    background-color: #333;
+    margin-bottom: 5%;
+    padding: 2%;
+}
+
+#main_index .post #post_author_infos
+{
+    height: 30%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+#main_index .post #post_author_infos #author_avatar
+{
+    height: 100%;
+    width: 10%;
+}
+#main_index .post #post_author_infos #author_avatar img
+{
+    border-radius: 100%;
+    border: 2px solid #FFCA4B;
+    height: 90%;
+    width: 90%;
+    transform: translateY(-12%);
+}
+#main_index .post #post_author_infos #author_username
+{
+    height: 100%;
+    width: 20%;
+}
+#main_index .post #post_author_infos #author_username h4
+{
+    margin: 0;
+    margin-top: 20%;
+    text-align: center;
+    color: white;
+}
+#main_index .post #post_message_infos
+{
+    height: 70%;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #FFCA4B;
+}
+#main_index .post #post_message_infos #post_title
+{
+    height: 20%;
+    width: 98%;
+    padding: 1%;
+    border-bottom: 2px solid #FFCA4B;
+}
+#main_index .post #post_message_infos #post_title h5
+{
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+    color: #88c1d0;
+}
+#main_index .post #post_message_infos #post_message
+{
+    height: 60%;
+    width: 98%;
+    padding: 1%;
+    overflow: auto;
+}
+#main_index .post #post_message_infos #post_message p
+{
+    font-size: 13px;
+    width: 100%;
+    height: 90%;
+    margin: 0;
+    color: #88c1d0;
+    text-align: justify;
+}
+/* REGISTER PAGE */
+#main_register
+{
+    height: 64%;
+    width: 28%;
+    background-color: #333;
+    border-radius: 10px;
+    border: 2px solid #FFCA4B;
+    padding: 1%;
+    margin-top: 9%;
+    margin-left: 33%;
+}
+#main_register h1
+{
+    text-align: center;
+    margin: 0;
+    border-bottom: 1px solid #FFCA4B;
+    color: #88c1d0;
+}
+#main_register form
+{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+    color: #88c1d0;
+}
+#main_register form input
+{
+    margin: 3%;
+    text-align: center;
+    width: 60%;
+    font-size: 30px;
+    border: 2px solid #FFCA4B;
+    background-color: rgb(31, 30, 30);
+    border-radius: 20px;
+    outline: none;
+    transition: 500ms width;
+    color: white;
+}
+#main_register form input::placeholder
+{
+    color: rgba(255, 255, 255, 0.39);
+}
+#main_register form input[type="submit"]
+{
+    font-size: 20px;
+    margin-top: 2%;
+    color: #88c1d0;
+    cursor: pointer;
+    width: 30%;
+    border-color: #FFCA4B;
+    transition: 500ms;
+    transition-property: transform, background, color, border;
+}
+#main_register form input:not([type="submit"]):focus
+{
+    width: 70%;
+}
+#main_register form input:not([type="submit"]):valid
+{
+    width: 70%;
+    border-color: #88c1d0;
+}
+#main_register form input[type="submit"]:hover
+{
+    background-color: #FFCA4B;
+    transform: scale(1.1,1.3);
+    color: black;
+    border-color: black;
+}
+#main_register a
+{
+    text-decoration: none;
+    color: #FFCA4B;
+    transition-property: color;
+    transition-duration: 200ms;
+}
+#main_register a:hover
+{
+    color: #88c1d0;
+}
+/* LOGIN PAGE */
+#main_login
+{
+    height: 33%;
+    width: 28%;
+    background-color: #333;
+    border-radius: 10px;
+    border: 2px solid #FFCA4B;
+    padding: 1%;
+    margin-top: 12%;
+    margin-left: 33%;
+}
+#main_login h1
+{
+    text-align: center;
+    margin: 0;
+    border-bottom: 1px solid #FFCA4B;
+    color: #88c1d0;
+}
+#main_login form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+    color: #88c1d0;
+}
+#main_login form input
+{
+    margin: 3%;
+    text-align: center;
+    width: 60%;
+    font-size: 30px;
+    border: 2px solid #FFCA4B;
+    background-color: rgb(31, 30, 30);
+    border-radius: 20px;
+    outline: none;
+    transition: 500ms width;
+    color: white;
+}
+#main_login form input::placeholder
+{
+    color: rgba(255, 255, 255, 0.39);
+}
+#main_login form input[type="submit"]
+{
+    font-size: 20px;
+    margin-top: 5%;
+    color: #88c1d0;
+    cursor: pointer;
+    width: 30%;
+    border-color: #FFCA4B;
+    transition: 500ms;
+    transition-property: transform, background, color, border;
+}
+#main_login form input:not([type="submit"]):focus
+{
+    width: 70%;
+}
+#main_login form input:not([type="submit"]):valid
+{
+    width: 70%;
+}
+#main_login form input[type="submit"]:hover
+{
+    background-color: #FFCA4B;
+    transform: scale(1.1,1.3);
+    color: black;
+    border-color: black;
+}
+#main_login a
+{
+    text-decoration: none;
+    color: #FFCA4B;
+    transition-property: color;
+    transition-duration: 200ms;
+}
+#main_login a:hover
+{
+    color: #88c1d0;
+}
+
+/* Profil Page */
+
+#main_profil
+{
+    height: 90%;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 5%;
+    background-color: rgb(51, 51, 51);
+    border: 2px solid black;
+    border-top: 0;
+}
+#main_profil #user
+{
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: url('images/backgrounds/profil_bcg.jpg');
+}
+
+#main_profil #user #user_infos
+{  
+    width: 30%;
+    height: 100%;
+}
+#main_profil #user #user_infos #avatar
+{
+    width: 100%;
+    height:80%;
+}
+#main_profil #user #user_infos #avatar img
+{
+    height: 90%;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+#main_profil #user #user_infos #username
+{
+    height: 20%;
+    width: 100%;
+}
+#main_profil #user #user_infos #username h3
+{
+    margin: 0;
+    text-align: center;
+}
+#main_profil #outils
+{
+    height: 75%;
+    width: 100%;
+    display: flex;
+}
+#main_profil #outils #posts_tools
+{
+    height: 100%;
+    width: 70%;
+}
+#main_profil #outils #posts_tools #create_post
+{
+    height: 30%;
+    width: 100%;
+    border-bottom: 2px solid black;
+    display: flex;
+    align-items: center;
+}
+#main_profil #outils #posts_tools #create_post form
+{
+    height: 90%;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 10px;
+    border: 2px solid #FFCA4B;
+}
+#main_profil #outils #posts_tools #create_post form #post_infos
+{
+    height: 20%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid #FFCA4B;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#main_profil #outils #posts_tools #create_post form #post_infos input[type="text"]
+{
+    width: 70%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 1%;
+    background-color: rgb(31, 30, 30);
+    color: white;
+    text-align: center;
+}
+#main_profil #outils #posts_tools #create_post form #post_infos input[type="submit"]
+{
+    width: 15%;
+    border-radius: 10px;
+    border: 1px solid black;
+    outline: none;
+    padding: 1%;
+    background-color: #FFCA4B;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+    transition-property: background;
+    transition-duration: 200ms;
+}
+#main_profil #outils #posts_tools #create_post form #post_infos input[type="submit"]:hover
+{
+    background-color: rgb(207, 151, 21);
+}
+#main_profil #outils #posts_tools #create_post form #post_message
+{
+    height: 80%;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 1%;
+}
+#main_profil #outils #posts_tools #create_post form #post_message textarea
+{
+    height: 86%;
+    width: 96%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 1%;
+    background-color: rgb(31, 30, 30);
+    color: white;
+    text-align: center;
+    resize: none;
+}
+#main_profil #outils #posts_tools #timeline
+{
+    height: 70%;
+    width: 100%;
+    overflow: auto;
+}
+#main_profil #outils #posts_tools #timeline .post
+{
+    height: 40%;
+    width: 90%;
+    border-radius: 10px;
+    border: 2px solid #FFCA4B;
+    background-color: #333;
+    margin: 2.5%;
+    padding: 2%;
+}
+
+#main_profil #outils #posts_tools #timeline .post #post_author_infos
+{
+    height: 30%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+#main_profil #outils #posts_tools #timeline .post #post_author_infos #author_avatar
+{
+    height: 100%;
+    width: 10%;
+}
+#main_profil #outils #posts_tools #timeline .post #post_author_infos #author_avatar img
+{
+    border-radius: 100%;
+    border: 2px solid #FFCA4B;
+    height: 100%;
+    width: 100%;
+    transform: translateY(-12%);
+}
+#main_profil #outils #posts_tools #timeline .post #post_author_infos #author_username
+{
+    height: 100%;
+    width: 20%;
+}
+#main_profil #outils #posts_tools #timeline .post #post_author_infos #author_username h4
+{
+    margin: 0;
+    margin-top: 20%;
+    text-align: center;
+    color: white;
+}
+#main_profil #outils #posts_tools #timeline .post #post_message_infos
+{
+    height: 70%;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #FFCA4B;
+}
+#main_profil #outils #posts_tools #timeline .post #post_message_infos #post_title
+{
+    height: 20%;
+    width: 98%;
+    padding: 1%;
+    border-bottom: 2px solid #FFCA4B;
+}
+#main_profil #outils #posts_tools #timeline .post #post_message_infos #post_title h5
+{
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+    color: #88c1d0;
+}
+#main_profil #outils #posts_tools #timeline .post #post_message_infos #post_message
+{
+    height: 60%;
+    width: 98%;
+    padding: 1%;
+    overflow: auto;
+}
+#main_profil #outils #posts_tools #timeline .post #post_message_infos #post_message p
+{
+    font-size: 13px;
+    width: 100%;
+    margin: 0;
+    color: #88c1d0;
+    text-align: justify;
+}
+
+#main_profil #outils #infos_tools
+{
+    height: 100%;
+    width: 30%;
+}
+#main_profil #outils #infos_tools #infos
+{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+}
+#main_profil #outils #infos_tools #infos h3
+{
+    margin: 0;
+    font-weight: 100;
+    font-size: 12px;
+    text-align: center;
+    color: #FFCA4B;
+    letter-spacing: 0;
+}
+#main_profil #outils #infos_tools #infos img
+{
+    align-self: center;
+    width: 30%;
+    height: 90%;
+    transition-property: transform;
+    transition-duration: 500ms;
+}
+#main_profil #outils #infos_tools #infos img:hover
+{
+    transform: scale(1.2,1.2);
+}
+#main_profil #outils #infos_tools #infos a
+{
+    text-align: center;
+}
+#main_profil #outils #infos_tools #infos form input[type="submit"]
+{
+    background-color: #FFCA4B;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    border-color: #FFCA4B;
+    transition: 500ms;
+    transition-property: transform, background, color, border;  
+    outline: none;
+}
+#main_profil #outils #infos_tools #infos form input[type="submit"]:hover
+{
+    background-color: red;
+    transform: scale(1.1,1.3);
+    color: black;
+    border-color: black;
+}
+#main_profil #outils #infos_tools #change_infos
+{
+    height: 60%;
+    width: 100%;
+    border-left: 1px solid black;
+}
+
+#main_profil #outils #infos_tools #change_infos input
+{
+    margin: 3%;
+    text-align: center;
+    width: 90%;
+    font-size: 15px;
+    border: 2px solid #FFCA4B;
+    background-color: rgb(31, 30, 30);
+    border-radius: 20px;
+    outline: none;
+    transition: 500ms width;
+    color: white;
+}
+
+#main_profil #outils #infos_tools #change_infos input[type="submit"]
+{
+    width: 60%;
+    margin-left: 20%;
+}
+
+section#users_admin h3
+{
+    margin: 0;
+    margin-top: 3%;
+    color: #FFCA4B;
+    text-align: center;
+}
+section#users_admin p
+{
+    margin: 0;
+    text-align: center;
+}
+
+main#main_chat
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main#main_chat section
+{
+    width: 60%;
+    height: 90%;
+    overflow: auto;
+    background-color: #333;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    display: flex;
+    flex-direction: column;
+}
+main#main_chat #create_message
+{
+    width: 60%;
+    height: 10%;
+    background-color: rgb(32, 32, 32);
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+main#main_chat #create_message form
+{
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    align-items: center;
+}
+main#main_chat #create_message input[type="text"]
+{
+    outline: none;
+    font-size: 25px;
+    background-color: #0f0f0f;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    height: 50%;
+    width: 70%;
+}
+main#main_chat #create_message input[type="submit"]
+{
+    outline: none;
+    font-size: 20px;
+    background-color: #333;
+    border-radius: 20px;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    transition-property: transform;
+    transition-duration: 500ms;
+}
+main#main_chat #create_message input[type="submit"]:hover
+{
+    transform: scale(1.1, 1.1);
+}
+
+main#main_chat section .mymessage
+{
+    border-radius: 20px;
+    background-color: #FFCA4B;
+    align-self: left;
+    padding: 10px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    max-width: 40%;
+}
+main#main_chat section .omessage
+{
+    height: auto;
+    border-radius: 20px;
+    background-color: #88c1d0;
+    padding: 10px;
+    overflow-wrap: break-word;
+    max-width: 40%;
+}
+main#main_chat section .message
+{
+    width: auto;
+    height: auto;
+    margin: 10px;
+    display: flex;
+    color: black;
+}
+main#main_chat section p
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+main#main_chat section .message#me
+{
+    justify-content: flex-end;
+}
+main#main_chat section .message#other
+{
+    justify-items: flex-start;
+}
+main#main_chat section .message#other img
+{
+    margin-right: 5px;
+    width: 5%;
+    height: 90%;
+    border-radius: 100%;
+}
+main#main_chat section .heure
+{
+    opacity: 0;
+    display: inline-flex;
+    background-color: rgba(70, 70, 165, 0.5);
+    border-radius: 20px;
+    margin-right: 10px;
+    padding: 10px;
+    color: white;
+    justify-content: space-around;
+    transition-property: opacity;
+    transition-duration: 250ms;
+}
+main#main_chat section .message:hover .heure
+{
+    opacity: 1;
+}
+main#main_chat section .heure#o
+{
+    margin-left: 10px;
+}
